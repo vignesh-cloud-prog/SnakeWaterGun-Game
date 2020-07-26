@@ -27,10 +27,10 @@ addBtn.addEventListener("click", function (e) {
   tHour = time.getHours()
   tMinutes = time.getMinutes()
   tSeconds = time.getSeconds()
+  let timeOfDay = (tHour < 12) ? "AM" : "PM";
   tHour = (tHour > 12) ? tHour - 12 : tHour;
   tHour = (tHour == 0) ? 12 : tHour;
   tHour = (tHour < 10 ? "0" : "") + tHour;
-  let timeOfDay = (tHour < 12) ? "AM" : "PM";
   tMinutes = (tMinutes < 10 ? "0" : "") + tMinutes;
   tSeconds = (tSeconds < 10 ? "0" : "") + tSeconds;
   tMonth = (tMonth < 10 ? "0" : "") + tMonth;
@@ -43,10 +43,10 @@ addBtn.addEventListener("click", function (e) {
   rHour = reminder.getHours()
   rMinutes = reminder.getMinutes()
   rSeconds = reminder.getSeconds()
+  let timeOfReminder = (rHour < 12) ? "AM" : "PM";
   rHour = (rHour > 12) ? rHour - 12 : rHour;
   rHour = (rHour == 0) ? 12 : rHour;
   rHour = (rHour < 10 ? "0" : "") + rHour;
-  let timeOfReminder = (rHour < 12) ? "AM" : "PM";
   rMinutes = (rMinutes < 10 ? "0" : "") + rMinutes;
   rSeconds = (rSeconds < 10 ? "0" : "") + rSeconds;
   rDate = (rDate < 10 ? "0" : "") + rDate;
@@ -86,10 +86,10 @@ function showNotes() {
             <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">Note ${index + 1} </h5>
-                        <p>was set at ${element.time}
+                        <i><p>was set at ${element.time}</p></i>
                         <h5 class="card-title"> ${element.title}</h5>
                         <p class="card-text"> ${element.notes}</p>
-                        <h5>Reminder at ${element.remind}
+                        <i><p>Reminder at ${element.remind}</p></i>
                         <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
                     </div>
                 </div>`;

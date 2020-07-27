@@ -1,7 +1,32 @@
 
 console.log("Welcome to notes app. This is app.js");
 showNotes();
+function dateformat(date) {
+  year = date.getFullYear()
+  month = date.getMonth()
+  day = date.getDate()
+  hour = date.getHours()
+  minute = date.getMinutes()
+  second = date.getSeconds()
+  let format = (hour < 12) ? "AM" : "PM";
+  hour = (hour > 12) ? hour - 12 : hour;
+  hour = (hour == 0) ? 12 : hour;
+  hour = (hour < 10 ? "0" : "") + hour;
+  minute = (minute < 10 ? "0" : "") + minute;
+  second = (second < 10 ? "0" : "") + second;
+  month = (month < 10 ? "0" : "") + month;
+  day = (day < 10 ? "0" : "") + day;
+  return ` ${hour}:${minute}:${second} ${format} ${day}/${month}/${year}`
 
+}
+function displayTime() {
+  time = new Date()
+  ctime = dateformat(time)
+  clock = document.getElementById('clock')
+  clock.innerHTML = `TIME : ${ctime}`
+
+}
+setInterval(displayTime, 1000);
 // If user adds a note, add it to the localStorage
 let addBtn = document.getElementById("addBtn");
 addBtn.addEventListener("click", function (e) {
@@ -20,37 +45,6 @@ addBtn.addEventListener("click", function (e) {
       audio.play()
     }, alarm);
   }
-  // format for notes set date
-  tYear = time.getFullYear()
-  tMonth = time.getMonth()
-  tDate = time.getDate()
-  tHour = time.getHours()
-  tMinutes = time.getMinutes()
-  tSeconds = time.getSeconds()
-  let timeOfDay = (tHour < 12) ? "AM" : "PM";
-  tHour = (tHour > 12) ? tHour - 12 : tHour;
-  tHour = (tHour == 0) ? 12 : tHour;
-  tHour = (tHour < 10 ? "0" : "") + tHour;
-  tMinutes = (tMinutes < 10 ? "0" : "") + tMinutes;
-  tSeconds = (tSeconds < 10 ? "0" : "") + tSeconds;
-  tMonth = (tMonth < 10 ? "0" : "") + tMonth;
-  tDate = (tDate < 10 ? "0" : "") + tDate;
-
-  // format for remind date
-  rYear = reminder.getFullYear()
-  rMonth = reminder.getMonth()
-  rDate = reminder.getDate()
-  rHour = reminder.getHours()
-  rMinutes = reminder.getMinutes()
-  rSeconds = reminder.getSeconds()
-  let timeOfReminder = (rHour < 12) ? "AM" : "PM";
-  rHour = (rHour > 12) ? rHour - 12 : rHour;
-  rHour = (rHour == 0) ? 12 : rHour;
-  rHour = (rHour < 10 ? "0" : "") + rHour;
-  rMinutes = (rMinutes < 10 ? "0" : "") + rMinutes;
-  rSeconds = (rSeconds < 10 ? "0" : "") + rSeconds;
-  rDate = (rDate < 10 ? "0" : "") + rDate;
-  rMonth = (rMonth < 10 ? "0" : "") + rMonth;
 
   if (notes == null) {
     notesObj = [];
@@ -60,8 +54,8 @@ addBtn.addEventListener("click", function (e) {
   let myNotesObj = {
     title: addTitle.value,
     notes: addTxt.value,
-    remind: ` ${rHour}:${rMinutes}:${rSeconds} ${timeOfReminder} ${rDate}/${rMonth}/${rYear}`,
-    time: ` ${tHour}:${tMinutes}:${tSeconds} ${timeOfDay} ${tDate}/${tMonth}/${tYear}`
+    remind: dateformat(reminder),
+    time: dateformat(time)
   }
   notesObj.push(myNotesObj);
   localStorage.setItem("notes", JSON.stringify(notesObj));

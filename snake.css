@@ -168,10 +168,11 @@ font-family: 'Rowdies', cursive; */
     border: 10px solid yellowgreen;
     border-bottom: none;
     background-color: white;
-    font-size: 5vh;
+    font-size: 5em;
     height: 7vh;
     color: red;
     padding: 4px;
+    overflow: hidden;
     /* margin: 0; */
     text-align: center;
 }

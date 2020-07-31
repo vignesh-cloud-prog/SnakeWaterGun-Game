@@ -3,8 +3,16 @@ let uname = "User"
 let upt = 0
 let opt = 0
 var no = 1
-let draw = 0
 
+
+function copyFunc() {
+    var copyText = document.getElementById("copyurl");
+    copyText.focus()
+    copyText.select()
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    alert("Copied the url: " + copyText.value);
+}
 
 function sign() {
     let regex = /[a-zA-Z]{3,15}/
@@ -25,7 +33,8 @@ function sign() {
         uname = document.getElementById("name").value
         if (regex.test(uname)) {
             entry = document.getElementById("entry").innerHTML = ""
-            console.log(uname);
+            userScore.innerHTML = `<p>${uname}</p><p>00</p>`
+
         } else {
             alert("Please enter your name, name shold only be alphabets and between 2-10 characters")
         }
@@ -36,7 +45,7 @@ function sign() {
 
 
 
-function start(value) {
+function start(value, callback) {
     sysno = Math.ceil(0 + (6 - 3) * Math.random());
     system = document.getElementById('system')
     user = document.getElementById('user')
@@ -74,80 +83,111 @@ function start(value) {
         console.log(`you sysno : ${userno} && system's sysno : ${sysno} `)
         console.log('You Win !')
         upt += 1
-        fight.innerHTML = `<img src="snake.jpg" alt="snake" height="100%" width="100%">`
-        rounds.innerHTML = `<p>Round</p><p>${no+1}/10</p>`
-        userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
-        systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+        setTimeout(() => {
+
+            fight.innerHTML = `<img src="snake.jpg" alt="snake" height="100%" width="100%">`
+            rounds.innerHTML = `<p>Round</p><p>${no+1}/10</p>`
+            userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
+            systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+        }, 500);
         message = `Snake swimmed away from water`
         result = `You Win !`
     } else if (userno == "1" && sysno == "3") {
         console.log(`you sysno : ${userno} && system's sysno : ${sysno} `)
         console.log('You Lost !')
         opt += 1
-        fight.innerHTML = `<img src="gun.jpg" alt="gun" height="100%" width="100%">`
-        rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-        userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
-        systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+        setTimeout(() => {
+
+            fight.innerHTML = `<img src="gun.jpg" alt="gun" height="100%" width="100%">`
+            rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
+            userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
+            systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+        }, 500);
         message = `Gun shooted the  snake`
         result = `You Lost !`
     } else if (userno == "3" && sysno == "2") {
         console.log(`you sysno : ${userno} && system's sysno : ${sysno} `)
         console.log('You Lost !')
         opt += 1
-        fight.innerHTML = `<img src="water.jpg" alt="water" height="100%" width="100%">`
-        rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-        userScore.innerHTML = `<p>User</p><p>${upt}</p>`
-        systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+        setTimeout(() => {
+
+            fight.innerHTML = `<img src="water.jpg" alt="water" height="100%" width="100%">`
+            rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
+            userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
+            systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+        }, 500);
         message = `gun lost in water`
         result = `You Lost !`
     } else if (userno == "3" && sysno == "1") {
         console.log(`you sysno : ${userno} && system's sysno : ${sysno} `)
         console.log('You Win !')
         upt += 1
-        fight.innerHTML = `<img src="gun.jpg" alt="gun" height="100%" width="100%">`
-        rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-        userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
-        systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+        setTimeout(() => {
+
+            fight.innerHTML = `<img src="gun.jpg" alt="gun" height="100%" width="100%">`
+            rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
+            userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
+            systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+        }, 500);
         message = `Gun kills the snake`
         result = `You Win !`
     } else if (userno == "2" && sysno == "3") {
         console.log(`you sysno : ${userno} && system's sysno : ${sysno} `);
         console.log('You Win !')
         upt += 1
-        fight.innerHTML = `<img src="water.jpg" alt="water" height="100%" width="100%">`
-        rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-        userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
-        systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+        setTimeout(() => {
+
+            fight.innerHTML = `<img src="water.jpg" alt="water" height="100%" width="100%">`
+            rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
+            userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
+            systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+        }, 500);
         message = `gun lost in water`
         result = `You Win !`
     } else if (userno == "2" && sysno == "1") {
         console.log(`you sysno : ${userno} && system's sysno : ${sysno} `)
         console.log('You Lost !')
         opt += 1
-        fight.innerHTML = `<img src="snake.jpg" alt="snake" height="100%" width="100%">`
-        rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-        userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
-        systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+        setTimeout(() => {
+
+            fight.innerHTML = `<img src="snake.jpg" alt="snake" height="100%" width="100%">`
+            rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
+            userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
+            systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+        }, 500);
         message = `Snake swimmed away from water`
         result = `You Lost !`
     } else if (userno == sysno) {
         console.log(`you sysno : ${userno} && system's sysno : ${sysno} `);
         console.log('match draw');
-        fight.innerHTML = `<img src="draw.jpg" alt="draw height="100%" width="100%">`
-        rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-        userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
-        systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
-        result = `Match draw`
-        message = `Both gets one point`
         upt += 1;
         opt += 1;
+        setTimeout(() => {
+
+            fight.innerHTML = `<img src="draw.jpg" alt="draw height="100%" width="100%">`
+            rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
+            userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
+            systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+        }, 500);
+        result = `Match draw`
+        message = `Both gets one point`
+
     }
     no = no + 1
-    msg = document.getElementById('msg').innerHTML = `<p>${message}</p>`
-    result = document.getElementById('result').innerHTML = `<p>${result}</p>`
+    setTimeout(() => {
+        msg = document.getElementById('msg').innerHTML = `<p>${message}</p>`
+
+    }, 500);
+    setTimeout(() => {
+
+        result = document.getElementById('result').innerHTML = `<p>${result}</p>`
+    }, 800);
 }
 
 function end(resmessage, desc) {
+
+    let link = "https://myimpnotes.herokuapp.com/snake.html"
+    let text = `Hey!, let's play Snake Water Gun game, have fun.`
     endhtml = `<div style="display: flex;flex-direction: column; align-items: center;justify-content: center; width: 100%;height: 100vh; padding: 10px;    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
     margin: auto; border-radius: 18px;">
 
@@ -156,6 +196,7 @@ function end(resmessage, desc) {
             <b style="font-size: 10vh;padding:1vhfont-family: 'Baloo 2', cursive;color: rgb(240, 51, 199); ">${uname}</b>
             <p style="font-size:3vh;padding:2vh; font-family: 'Acme', sans-serif;
             ;">${desc}</p>
+            <input type="text"id="copyurl" value="https://myimpnotes.herokuapp.com/snake.html">
         </div>
 
 
@@ -165,20 +206,23 @@ function end(resmessage, desc) {
             <b style="font-size:6vh;
   font-family: 'Roboto Slab', serif;padding: 8px 28px 18px 28px;font-size: 30px;  ">Share on</b>
             <span>
-                <a href=""><img src="copy.png" alt=""style="height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
-                <a href=""><img src="email.png" alt=""style=" height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
-                <a href=""><img src="facebook.png" alt="" style="height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
-                <a href=""><img src="whatsapp.jpg" alt=""style=" height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;"></a>
+                <a onclick="copyFunc()"><img src="copy.png" alt=""style="height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
+                <a href="mailto:?subject=Play Game&body=${text}, ${link}"><img src="email.png" alt=""style=" height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u= ${link}""><img src="facebook.png" alt="" style="height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
+                <a href="https://api.whatsapp.com/send?text= ${text} ${link}"><img src="whatsapp.jpg" alt=""style=" height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;"></a>
         </span>
         </div>
 
     </div>`
+    let game = document.getElementById("game").innerHTML
     document.getElementById('game').innerHTML = ""
     document.getElementById('end').innerHTML = endhtml
     document.getElementById('replay').addEventListener("click", () => {
-        window.location.reload(true)
+        window.location.reload()
+
 
     })
+
 }
 
 
@@ -201,11 +245,7 @@ water = document.getElementById('2').addEventListener('click', () => {
             desc = `You lose with ${opt-upt} points`
 
         }
-        start(2)
-        setTimeout(() => {
-            end(resmessage, desc)
-        }, 3000);
-        clearInterval()
+        end(resmessage, desc, start(2))
 
         console.log('draw', draw, 'upt', opt, 'opt', upt);
     }
@@ -227,11 +267,7 @@ gun = document.getElementById('3').addEventListener('click', () => {
             desc = `You lose with ${opt-upt} points`
 
         }
-        start(3)
-        setTimeout(() => {
-            end(resmessage, desc)
-        }, 3000);
-        clearInterval()
+        end(resmessage, desc, start(3))
 
         console.log('draw', draw, 'upt', opt, 'opt', upt);
     }
@@ -252,12 +288,15 @@ snake = document.getElementById('1').addEventListener('click', () => {
             desc = `You lose with ${opt-upt} points`
 
         }
-        start(1)
         document.getElementById("game").style.disabled = true;
-        setTimeout(() => {
-            end(resmessage, desc)
-        }, 2000);
-        clearInterval()
+        // setInterval(() => {
+        //     start(1)
+        // }, 3000);
+        // setTimeout(() => {
+        end(resmessage, desc, start(1))
+
+        // }, 3000);
+        // clearInterval()
 
         console.log('draw', draw, 'upt', opt, 'opt', upt);
     }

@@ -3,6 +3,15 @@
     margin: 0;
 }
 
+@keyframes mymove {
+    from {
+        top: 0;
+    }
+    to {
+        bottom: 0;
+    }
+}
+
 #scoreBoard {
     display: flex;
     height: 10vh;

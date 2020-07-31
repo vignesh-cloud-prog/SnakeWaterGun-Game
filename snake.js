@@ -2,7 +2,7 @@
 let uname = "User"
 let upt = 0
 let opt = 0
-var no = 1
+var no = 0
 
 
 function copyFunc() {
@@ -23,7 +23,7 @@ function sign() {
     -webkit-background-clip: text;
     background-clip: text;
   ">Snake Water Gun</p>
-    <input id="name" type="text" placeholder="Enter your name " style="font-weight:bold;text-align:center; border-radius: 30px; width: 60%;height:80px; margin: 5vh; padding:10px; border: 4px solid rgba(255, 128, 43, 0.849); font-family: cursive;font-size:55px;">
+    <input id="name" type="text" placeholder="Enter your name " style="font-weight:bold;text-align:center; border-radius: 30px; width: 60%;height:80px; margin: 5vh; padding:10px; border: 4px solid rgba(255, 128, 43, 0.849); font-family:cursive;font-size:55px;">
     <button id="play" style=" border-radius: 23px; width: 50%; margin:10px 20px 60px 20px; background: linear-gradient(to bottom, #0066ff 0%, #ff99cc 100%); padding:20px 20px; border: 5px solid rgb(72, 72, 231); font-size: 90px; font-family: 'Fredoka One', cursive;">Play</button>
 </div> </div>`
 
@@ -46,6 +46,7 @@ function sign() {
 
 
 function start(value, callback) {
+    no = no + 1
     sysno = Math.ceil(0 + (6 - 3) * Math.random());
     system = document.getElementById('system')
     user = document.getElementById('user')
@@ -173,7 +174,6 @@ function start(value, callback) {
         message = `Both gets one point`
 
     }
-    no = no + 1
     setTimeout(() => {
         msg = document.getElementById('msg').innerHTML = `<p>${message}</p>`
 
@@ -231,7 +231,7 @@ console.log('number is ', no);
 // play()
 
 water = document.getElementById('2').addEventListener('click', () => {
-    if (no <= 9) {
+    if (no < 9) {
         start(2)
     } else {
         let resmessage = ""
@@ -246,14 +246,12 @@ water = document.getElementById('2').addEventListener('click', () => {
 
         }
         end(resmessage, desc, start(2))
-
-        console.log('draw', draw, 'upt', opt, 'opt', upt);
     }
 
 })
 gun = document.getElementById('3').addEventListener('click', () => {
     console.log('you clicked gun');
-    if (no <= 9) {
+    if (no < 9) {
         start(3)
     } else {
         let resmessage = ""
@@ -269,12 +267,11 @@ gun = document.getElementById('3').addEventListener('click', () => {
         }
         end(resmessage, desc, start(3))
 
-        console.log('draw', draw, 'upt', opt, 'opt', upt);
     }
 })
 snake = document.getElementById('1').addEventListener('click', () => {
     console.log('you clicked snake');
-    if (no <= 9) {
+    if (no < 9) {
         start(1)
     } else {
         let resmessage = ""
@@ -298,6 +295,5 @@ snake = document.getElementById('1').addEventListener('click', () => {
         // }, 3000);
         // clearInterval()
 
-        console.log('draw', draw, 'upt', opt, 'opt', upt);
     }
 })

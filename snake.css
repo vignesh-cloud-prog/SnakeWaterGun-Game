@@ -7,7 +7,6 @@
     display: flex;
     height: 10vh;
     padding: 5px;
-    /* margin-top: 5px; */
     background-color: rgb(185, 182, 1);
     text-align: center;
     justify-content: center;
@@ -19,11 +18,11 @@
     width: 100%;
     height: max-content;
     text-align: center;
-    overflow: hidden;
 }
 
 .board {
     width: 80%;
+    overflow: hidden;
     height: 8vh;
     align-items: center;
     justify-content: center;
@@ -93,10 +92,9 @@
     height: 15vh;
     margin: 10px 25px;
     width: 90%;
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
-    grid-template-columns: 1fr 2fr 1fr;
 }
 
 #army p {

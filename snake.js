@@ -7,6 +7,7 @@ let draw = 0
 
 
 function sign() {
+    let regex = /[a-zA-Z]{3,15}/
     namesign = ` <div  style=" position: absolute; top: 20%;  width: 100%; height: 100%;">
 <div  style="width: 90%; height:60%; background: linear-gradient(to bottom, #ff0000 0%, #6666ff 100%); border-radius: 28px; border: 6px solid rgb(255, 196, 0); margin: auto;display: flex;flex-direction: column; align-items: center;justify-content: center;">
     <p style="text-align: center; width:100%; margin:10vh 0 6vh 0; font-size: 96px;font-weight: bold; background-image: linear-gradient(to right, red, green 33%,blue 35%, black);
@@ -18,14 +19,22 @@ function sign() {
     <button id="play" style=" border-radius: 23px; width: 50%; margin:10px 20px 60px 20px; background: linear-gradient(to bottom, #0066ff 0%, #ff99cc 100%); padding:20px 20px; border: 5px solid rgb(72, 72, 231); font-size: 90px; font-family: 'Fredoka One', cursive;">Play</button>
 </div> </div>`
 
-    console.log("you entered sign in");
-    entry = document.getElementById("entry").innerHTML = namesign
+    document.getElementById("entry").innerHTML = namesign
+
     play = document.getElementById("play").addEventListener("click", () => {
         uname = document.getElementById("name").value
-        entry = document.getElementById("entry").innerHTML = ""
-        console.log(uname);
+        if (regex.test(uname)) {
+            entry = document.getElementById("entry").innerHTML = ""
+            console.log(uname);
+        } else {
+            alert("Please enter your name, name shold only be alphabets and between 2-10 characters")
+        }
     })
+
 }
+
+
+
 
 function start(value) {
     sysno = Math.ceil(0 + (6 - 3) * Math.random());
@@ -244,10 +253,10 @@ snake = document.getElementById('1').addEventListener('click', () => {
 
         }
         start(1)
-        document.getElementById("game").disable = true
+        document.getElementById("game").style.disabled = true;
         setTimeout(() => {
             end(resmessage, desc)
-        }, 3000);
+        }, 2000);
         clearInterval()
 
         console.log('draw', draw, 'upt', opt, 'opt', upt);

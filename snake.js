@@ -7,15 +7,15 @@ let draw = 0
 
 
 function sign() {
-    namesign = ` <div  style="position: absolute; top: 40%;  width: 100%; height: 100%;">
-<div  style="width: 90%; height:max-content ; background: linear-gradient(to bottom, #ff0000 0%, #6666ff 100%);; border-radius: 28px; border: 6px solid rgb(255, 196, 0); margin: auto;display: flex;flex-direction: column; align-items: center;">
-    <p style="text-align: center; width:100%; height:100%; margin:40px; font-size: 80px;font-weight: bold; background-image: linear-gradient(to right, red, green 33%,blue 35%, black);
+    namesign = ` <div  style=" position: absolute; top: 20%;  width: 100%; height: 100%;">
+<div  style="width: 90%; height:60%; background: linear-gradient(to bottom, #ff0000 0%, #6666ff 100%); border-radius: 28px; border: 6px solid rgb(255, 196, 0); margin: auto;display: flex;flex-direction: column; align-items: center;justify-content: center;">
+    <p style="text-align: center; width:100%; margin:10vh 0 6vh 0; font-size: 96px;font-weight: bold; background-image: linear-gradient(to right, red, green 33%,blue 35%, black);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
   ">Snake Water Gun</p>
-    <input id="name" type="text" placeholder="Enter your name " style=" text-align:center; border-radius: 30px; width: 90%; margin: 40px 20px 10px 20px; padding:10px; border: 4px solid rgba(255, 128, 43, 0.849); font-size: 24px; font-family: cursive;">
-    <button id="play" style="border-radius: 23px; width: 70%; margin:10px 20px 40px 20px; background: linear-gradient(to bottom, #0066ff 0%, #ff99cc 100%); padding:10px 20px; border: 5px solid rgb(72, 72, 231); font-size: 30px; font-family: 'Fredoka One', cursive;">Play</button>
+    <input id="name" type="text" placeholder="Enter your name " style="font-weight:bold;text-align:center; border-radius: 30px; width: 60%;height:80px; margin: 5vh; padding:10px; border: 4px solid rgba(255, 128, 43, 0.849); font-family: cursive;font-size:55px;">
+    <button id="play" style=" border-radius: 23px; width: 50%; margin:10px 20px 60px 20px; background: linear-gradient(to bottom, #0066ff 0%, #ff99cc 100%); padding:20px 20px; border: 5px solid rgb(72, 72, 231); font-size: 90px; font-family: 'Fredoka One', cursive;">Play</button>
 </div> </div>`
 
     console.log("you entered sign in");
@@ -193,7 +193,7 @@ water = document.getElementById('2').addEventListener('click', () => {
 
         }
         start(2)
-        setInterval(() => {
+        setTimeout(() => {
             end(resmessage, desc)
         }, 3000);
         clearInterval()
@@ -219,7 +219,7 @@ gun = document.getElementById('3').addEventListener('click', () => {
 
         }
         start(3)
-        setInterval(() => {
+        setTimeout(() => {
             end(resmessage, desc)
         }, 3000);
         clearInterval()
@@ -245,7 +245,7 @@ snake = document.getElementById('1').addEventListener('click', () => {
         }
         start(1)
         document.getElementById("game").disable = true
-        setInterval(() => {
+        setTimeout(() => {
             end(resmessage, desc)
         }, 3000);
         clearInterval()

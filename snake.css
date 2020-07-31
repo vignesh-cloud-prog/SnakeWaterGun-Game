@@ -30,6 +30,7 @@ font-family: 'Rowdies', cursive; */
     width: 100%;
     height: max-content;
     text-align: center;
+    overflow: hidden;
 }
 
 .board {
@@ -50,10 +51,6 @@ font-family: 'Rowdies', cursive; */
     padding: 5px;
     border: 10px solid maroon;
     background-color: rgb(255, 254, 254);
-}
-
-#army {
-    height: 15vh;
 }
 
 #warArea {
@@ -159,11 +156,10 @@ font-family: 'Rowdies', cursive; */
 } */
 
 #home {
-    display: grid;
+    display: flex;
     background-color: yellow;
     border: 10px solid yellowgreen;
     padding: 5px;
-    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
 }
@@ -176,7 +172,7 @@ font-family: 'Rowdies', cursive; */
     height: 7vh;
     color: red;
     padding: 4px;
-    margin: 0;
+    /* margin: 0; */
     text-align: center;
 }
 
@@ -202,6 +198,6 @@ img {
     font-size: 3vh;
     margin: 20px;
     height: 12vh;
-    width: 14vh;
+    width: 20vh;
     text-align: center;
 }

@@ -244,6 +244,10 @@ water = document.getElementById('2').addEventListener('click', () => {
             resmessage = "Better luck next time"
             desc = `You lose with ${opt-upt} points`
 
+        } else {
+            resmessage = "Match draw"
+            desc = `both gets ${opt} points`
+
         }
         end(resmessage, desc, start(2))
     }
@@ -264,6 +268,10 @@ gun = document.getElementById('3').addEventListener('click', () => {
             resmessage = "Better luck next time"
             desc = `You lose with ${opt-upt} points`
 
+        } else {
+            resmessage = "Match draw"
+            desc = `both gets ${opt} points`
+
         }
         end(resmessage, desc, start(3))
 
@@ -283,6 +291,10 @@ snake = document.getElementById('1').addEventListener('click', () => {
         } else if (upt < opt) {
             resmessage = "Better luck next time"
             desc = `You lose with ${opt-upt} points`
+
+        } else {
+            resmessage = "Match draw"
+            desc = `both gets ${opt} points`
 
         }
         document.getElementById("game").style.disabled = true;

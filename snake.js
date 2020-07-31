@@ -187,7 +187,7 @@ function start(value, callback) {
 function end(resmessage, desc) {
 
     let link = "https://myimpnotes.herokuapp.com/snake.html"
-    let text = `Hey!, let's play Snake Water Gun game, have fun.`
+    let text = `Hey!, let's play Snake Water Gun game, have fun.     `
     endhtml = `<div style="display: flex;flex-direction: column; align-items: center;justify-content: center; width: 100%;height: 100vh; padding: 10px;    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
     margin: auto; border-radius: 18px;">
 
@@ -196,7 +196,7 @@ function end(resmessage, desc) {
             <b style="font-size: 10vh;padding:1vhfont-family: 'Baloo 2', cursive;color: rgb(240, 51, 199); ">${uname}</b>
             <p style="font-size:3vh;padding:2vh; font-family: 'Acme', sans-serif;
             ;">${desc}</p>
-            <input type="text"id="copyurl" value="https://myimpnotes.herokuapp.com/snake.html">
+            <input type="text" id="copyurl" style="display:none;" value="https://myimpnotes.herokuapp.com/snake.html">
         </div>
 
 
@@ -207,7 +207,7 @@ function end(resmessage, desc) {
   font-family: 'Roboto Slab', serif;padding: 8px 28px 18px 28px;font-size: 30px;  ">Share on</b>
             <span>
                 <a onclick="copyFunc()"><img src="copy.png" alt=""style="height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
-                <a href="mailto:?subject=Play Game&body=${text}, ${link}"><img src="email.png" alt=""style=" height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
+                <a href="mailto:?subject=Play Game&body=${text} ${link}"><img src="email.png" alt=""style=" height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u= ${link}""><img src="facebook.png" alt="" style="height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
                 <a href="https://api.whatsapp.com/send?text= ${text} ${link}"><img src="whatsapp.jpg" alt=""style=" height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;"></a>
         </span>

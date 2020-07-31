@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Water and Gun Game</title>
+    <link rel="stylesheet" href="snake.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+</head>
+
+<body onload="sign()">
+    <div id="entry"></div>
+    <div id="game">
+        <div id="scoreBoard">
+            <div id="systemScore" class="board">
+                <p>System</p>
+                <p>00</p>
+            </div>
+            <div class="board" id="rounds">
+                <p>Round</p>
+                <p>01/10</p>
+            </div>
+            <div id="userScore" class="board">
+                <p>User </p>
+                <p>00</p>
+            </div>
+
+        </div>
+        <div id="area">
+            <div id="warArea">
+                <div id="fight"></div>
+                <div id="msg">
+
+                </div>
+                <div id="result">
+
+                </div>
+            </div>
+            <div id="army">
+                <div id="systemCoin">
+                    <div id="system"></div>
+                    <p>system</p>
+                </div>
+                <div id="state">
+
+                </div>
+                <div id="userCoin">
+                    <div id="user"></div>
+                    <p>User </p>
+                </div>
+            </div>
+        </div>
+        <p id="question">What you want to make ?</p>
+        <div id="home">
+            <div id="1" class="weapon">
+                <img src="snake.jpg" alt="snake">
+                <p>Snake</p>
+            </div>
+            <div id="2" class="weapon">
+                <img src="water.jpg" alt="water">
+                <p>Water</p>
+            </div>
+            <div id="3" class="weapon">
+                <img src="gun.jpg" alt="gun">
+                <p>Gun</p>
+            </div>
+        </div>
+    </div>
+    <div id="end"></div>
+
+    <script src="snake.js"></script>
+</body>
+
+</html>

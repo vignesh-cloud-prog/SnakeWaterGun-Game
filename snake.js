@@ -16,8 +16,7 @@ function sign() {
   ">Snake Water Gun</p>
     <input id="name" type="text" placeholder="Enter your name " style=" text-align:center; border-radius: 30px; width: 90%; margin: 40px 20px 10px 20px; padding:10px; border: 4px solid rgba(255, 128, 43, 0.849); font-size: 24px; font-family: cursive;">
     <button id="play" style="border-radius: 23px; width: 70%; margin:10px 20px 40px 20px; background: linear-gradient(to bottom, #0066ff 0%, #ff99cc 100%); padding:10px 20px; border: 5px solid rgb(72, 72, 231); font-size: 30px; font-family: 'Fredoka One', cursive;">Play</button>
-</div> <
-        /div>`
+</div> </div>`
 
     console.log("you entered sign in");
     entry = document.getElementById("entry").innerHTML = namesign
@@ -68,7 +67,7 @@ function start(value) {
         upt += 1
         fight.innerHTML = `<img src="snake.jpg" alt="snake" height="100%" width="100%">`
         rounds.innerHTML = `<p>Round</p><p>${no+1}/10</p>`
-        userScore.innerHTML = `<p>User</p><p>${upt}</p>`
+        userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
         systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
         message = `Snake swimmed away from water`
         result = `You Win !`
@@ -78,7 +77,7 @@ function start(value) {
         opt += 1
         fight.innerHTML = `<img src="gun.jpg" alt="gun" height="100%" width="100%">`
         rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-        userScore.innerHTML = `<p>User</p><p>${upt}</p>`
+        userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
         systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
         message = `Gun shooted the  snake`
         result = `You Lost !`
@@ -98,7 +97,7 @@ function start(value) {
         upt += 1
         fight.innerHTML = `<img src="gun.jpg" alt="gun" height="100%" width="100%">`
         rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-        userScore.innerHTML = `<p>User</p><p>${upt}</p>`
+        userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
         systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
         message = `Gun kills the snake`
         result = `You Win !`
@@ -108,7 +107,7 @@ function start(value) {
         upt += 1
         fight.innerHTML = `<img src="water.jpg" alt="water" height="100%" width="100%">`
         rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-        userScore.innerHTML = `<p>User</p><p>${upt}</p>`
+        userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
         systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
         message = `gun lost in water`
         result = `You Win !`
@@ -118,7 +117,7 @@ function start(value) {
         opt += 1
         fight.innerHTML = `<img src="snake.jpg" alt="snake" height="100%" width="100%">`
         rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-        userScore.innerHTML = `<p>User</p><p>${upt}</p>`
+        userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
         systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
         message = `Snake swimmed away from water`
         result = `You Lost !`
@@ -126,6 +125,9 @@ function start(value) {
         console.log(`you sysno : ${userno} && system's sysno : ${sysno} `);
         console.log('match draw');
         fight.innerHTML = `<img src="draw.jpg" alt="draw height="100%" width="100%">`
+        rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
+        userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
+        systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
         result = `Match draw`
         message = `Both gets one point`
         upt += 1;

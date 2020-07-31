@@ -120,7 +120,7 @@ font-family: 'Rowdies', cursive; */
     padding: 10px;
 }
 
-#systemCoin {
+.coin {
     background-color: white;
     border-radius: 28px;
     width: 16vh;
@@ -149,13 +149,14 @@ font-family: 'Rowdies', cursive; */
     font-size: 1rem;
 }
 
-#userCoin {
+
+/* #userCoin {
     border-radius: 28px;
     background-color: white;
     width: 16vh;
     height: 10vh;
     margin: auto;
-}
+} */
 
 #home {
     display: grid;
@@ -182,9 +183,15 @@ font-family: 'Rowdies', cursive; */
 
 /* user planel */
 
-img {
+.coin img {
     height: 8vh;
     width: 15vh;
+    margin: auto;
+}
+
+img {
+    height: 8vh;
+    width: 10vh;
     margin: auto;
 }
 
@@ -195,6 +202,6 @@ img {
     font-size: 3vh;
     margin: 20px;
     height: 12vh;
-    width: 15vh;
+    width: 14vh;
     text-align: center;
 }

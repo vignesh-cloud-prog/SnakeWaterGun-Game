@@ -91,7 +91,7 @@ function start(value, callback) {
             userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
         }, 500);
-        message = `Snake swimmed away from water`
+        message = `Snake drank the water`
         result = `You Win !`
     } else if (userno == "1" && sysno == "3") {
         console.log(`you sysno : ${userno} && system's sysno : ${sysno} `)
@@ -156,7 +156,7 @@ function start(value, callback) {
             userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
         }, 500);
-        message = `Snake swimmed away from water`
+        message = `Snake drank the water`
         result = `You Lost !`
     } else if (userno == sysno) {
         console.log(`you sysno : ${userno} && system's sysno : ${sysno} `);

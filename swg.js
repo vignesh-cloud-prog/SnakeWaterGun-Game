@@ -24,9 +24,9 @@ function sign() {
     -webkit-background-clip: text;
     background-clip: text;
   ">Snake Water Gun</p>
-  <lable style=" font-size:4vh; margin:0 8vh;">Your Name : </lable>
-    <input id="name" type="text" placeholder="Enter your name " style="font-weight:bold;text-align:center; border-radius: 30px; width: 60%;height:5%; margin:1vh 8vh; padding:5px; border: 4px solid rgba(255, 128, 43, 0.849); font-family:monospace, cursive;font-size:3vh;">
-    <lable style=" font-size:3vh; margin:0 8vh;margin-top:2vh">How many Rounds <br> <small>do you want to play?</small> </lable>
+  <lable style=" font-size:3vh; margin:0 8vh;">Your Name : </lable>
+    <input id="name" type="text" placeholder="Enter your name " style="font-weight:bold;text-align:center; border-radius: 30px; width: 60%;height:5%; margin:1vh 8vh; padding:5px; border: 4px solid rgba(255, 128, 43, 0.849); font-family:monospace;font-size:3vh;">
+    <lable style=" font-size:2vh; margin:0 8vh;margin-top:2vh">How many Rounds <br> <small>do you want to play?</small> </lable>
     <input id="noOfRounds" type="number" min="5" max="50" step="5" value="10" style="font-weight:bold;text-align:center; border-radius: 30px; width: 60%;height:5%; margin:1vh 8vh; padding:5px; border: 4px solid rgba(255, 128, 43, 0.849); font-family:monospace;font-size:3vh;">
     <button id="play" style=" border-radius: 23px; width: 50%; margin: 4vh auto;margin-bottom:10vh;  background: linear-gradient(to bottom, #0066ff 0%, #ff99cc 100%); padding:2vh; border: 5px solid rgb(72, 72, 231); font-size: 4vh; font-family: 'Fredoka One', cursive;">Play</button>
 </div> </div>`

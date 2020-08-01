@@ -1,4 +1,3 @@
-// game=document.getElementById('game').addEventListener('click',()=>
 let uname = "User"
 let upt = 0
 let opt = 0
@@ -37,7 +36,7 @@ function sign() {
         uname = document.getElementById("name").value
         no = parseInt(document.getElementById("noOfRounds").value)
         totalNo = no
-        if (regex.test(uname)) {
+        if (regex.test(uname) && regex.test(no)) {
             entry = document.getElementById("entry").innerHTML = ""
             document.getElementById('userName').innerText = uname
             document.getElementById("rounds").innerText = `${ (totalNo + 1) - no}/${totalNo}`

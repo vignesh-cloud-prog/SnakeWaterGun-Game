@@ -214,9 +214,9 @@ img {
 }
 
 #info h1 {
-    font-size: 5em;
+    font-size: 6em;
     margin: 1vh;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
 }
 
 #info p {

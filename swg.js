@@ -1,7 +1,7 @@
 let uname = "User"
 let upt = 0
 let opt = 0
-var no = 0
+var no = 10
 let totalNo = 0
 
 

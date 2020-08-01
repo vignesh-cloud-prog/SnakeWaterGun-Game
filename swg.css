@@ -10,15 +10,6 @@
     justify-content: center;
 }
 
-@keyframes mymove {
-    from {
-        top: 0;
-    }
-    to {
-        bottom: 0;
-    }
-}
-
 #scoreBoard {
     display: flex;
     height: 10vh;
@@ -249,7 +240,7 @@ img {
 }
 
 #devinfo a {
-    font-family:
+    font-family: cursive;
 }
 
 #devinfo span {

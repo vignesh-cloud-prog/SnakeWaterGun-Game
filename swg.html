@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta id="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Water and Gun Game</title>
-    <link rel="stylesheet" href="snake.css">
+    <link rel="stylesheet" href="swg.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
@@ -17,14 +17,20 @@
     <div id="entry"></div>
     <div id="game">
         <div id="scoreBoard">
-            <div id="systemScore" class="board">
-                System <br> 00
+            <div class="board">
+                <div>System</div>
+                <div id="systemScore">00</div>
             </div>
-            <div class="board" id="rounds">
-                Round <br> 01/10
+            <div class="board">
+                <div>Round</div>
+                <div id="rounds">00/00</div>
+
+
             </div>
-            <div id="userScore" class="board">
-                User <br> 00
+            <div class="board">
+                <div id="userName">You</div>
+                <div id="userScore">00</div>
+
             </div>
 
         </div>
@@ -85,7 +91,7 @@
         </span>
     </div>
 
-    <script src="snake.js"></script>
+    <script src="swg.js"></script>
 </body>
 
 </html>

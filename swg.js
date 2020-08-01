@@ -18,15 +18,17 @@ function copyFunc() {
 function sign() {
     let regex = /[a-zA-Z]{3,15}/
     namesign = ` <div  style=" position: absolute; top: 20%;  width: 100%; height: 100%;">
-<div  style="width: 90%; height:60%; background: linear-gradient(to bottom, #ff0000 0%, #6666ff 100%); border-radius: 28px; border: 6px solid rgb(255, 196, 0); margin: auto;display: flex;flex-direction: column; align-items: center;justify-content: center;">
-    <p style="text-align: center; width:100%; margin:10vh 0 6vh 0; font-size: 96px;font-weight: bold; background-image: linear-gradient(to right, red, green 33%,blue 35%, black);
+<div  style="width: 90%; height:60%; background: linear-gradient(to bottom, #ff0000 0%, #6666ff 100%); border-radius: 28px; border: 6px solid rgb(255, 196, 0); margin: auto;display: flex;flex-direction: column;justify-content: center;">
+    <p style="text-align: center; width:100%; margin:10vh 0 5vh 0; font-size: 6vh;font-weight: bold; background-image: linear-gradient(to right, red, green 33%,blue 35%, black);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
   ">Snake Water Gun</p>
-    <input id="name" type="text" placeholder="Enter your name " style="font-weight:bold;text-align:center; border-radius: 30px; width: 60%;height:80px; margin: 5vh; padding:10px; border: 4px solid rgba(255, 128, 43, 0.849); font-family:'Lobster', cursive;font-size:55px;">
-    <input id="noOfRounds" type="number" min="5" max="50" step="5" value="10" placeholder="how many rounds do you want to play? " style="font-weight:bold;text-align:center; border-radius: 30px; width: 60%;height:80px; margin: 5vh; padding:10px; border: 4px solid rgba(255, 128, 43, 0.849); font-family:monospace;font-size:55px;">
-    <button id="play" style=" border-radius: 23px; width: 50%; margin:10px 20px 60px 20px; background: linear-gradient(to bottom, #0066ff 0%, #ff99cc 100%); padding:20px 20px; border: 5px solid rgb(72, 72, 231); font-size: 90px; font-family: 'Fredoka One', cursive;">Play</button>
+  <lable style=" font-size:4vh; margin:0 12vh;">Your Name : </lable>
+    <input id="name" type="text" placeholder="Enter your name " style="font-weight:bold;text-align:center; border-radius: 30px; width: 60%;height:5%; margin:1vh 11vh; padding:5px; border: 4px solid rgba(255, 128, 43, 0.849); font-family:monospace, cursive;font-size:3vh;">
+    <lable style=" font-size:3vh; margin:0 12vh;margin-top:2vh">How many Rounds <br> <small>do you want to play?</small> </lable>
+    <input id="noOfRounds" type="number" min="5" max="50" step="5" value="10" style="font-weight:bold;text-align:center; border-radius: 30px; width: 60%;height:5%; margin:1vh 11vh; padding:5px; border: 4px solid rgba(255, 128, 43, 0.849); font-family:monospace;font-size:3vh;">
+    <button id="play" style=" border-radius: 23px; width: 50%; margin: 4vh auto;margin-bottom:10vh;  background: linear-gradient(to bottom, #0066ff 0%, #ff99cc 100%); padding:2vh; border: 5px solid rgb(72, 72, 231); font-size: 4vh; font-family: 'Fredoka One', cursive;">Play</button>
 </div> </div>`
 
     document.getElementById("entry").innerHTML = namesign
@@ -37,8 +39,8 @@ function sign() {
         totalNo = no
         if (regex.test(uname)) {
             entry = document.getElementById("entry").innerHTML = ""
-            userScore.innerHTML = `<p>${uname}</p><p>00</p>`
-            document.getElementById("rounds").innerHTML = `<p>Rounds</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
+            document.getElementById('userName').innerText = uname
+            document.getElementById("rounds").innerText = `${ (totalNo + 1) - no}/${totalNo}`
 
         } else {
             alert("Please enter your name, name shold only be alphabets and between 2-10 characters")
@@ -137,9 +139,9 @@ function start(value, callback) {
         setTimeout(() => {
 
             fight.innerHTML = `<img src="snake.jpg" alt="snake" height="100%" width="100%">`
-            rounds.innerHTML = `<p>Round</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
-            userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
-            systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+            rounds.innerText = `${ (totalNo + 1) - no}/${totalNo}`
+            userScore.innerText = `${upt}`
+            systemScore.innerText = `${opt}`
         }, 300);
         message = `Snake drank the water`
         result = `You Win !`
@@ -150,9 +152,9 @@ function start(value, callback) {
         setTimeout(() => {
 
             fight.innerHTML = `<img src="gun.jpg" alt="gun" height="100%" width="100%">`
-            rounds.innerHTML = `<p>Round</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
-            userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
-            systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+            rounds.innerText = `${ (totalNo + 1) - no}/${totalNo}`
+            userScore.innerText = `${upt}`
+            systemScore.innerText = `${opt}`
         }, 300);
         message = `Gun shooted the  snake`
         result = `You Lost !`
@@ -163,9 +165,9 @@ function start(value, callback) {
         setTimeout(() => {
 
             fight.innerHTML = `<img src="water.jpg" alt="water" height="100%" width="100%">`
-            rounds.innerHTML = `<p>Round</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
-            userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
-            systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+            rounds.innerText = `${ (totalNo + 1) - no}/${totalNo}`
+            userScore.innerText = `${upt}`
+            systemScore.innerText = `${opt}`
         }, 300);
         message = `gun lost in water`
         result = `You Lost !`
@@ -176,9 +178,9 @@ function start(value, callback) {
         setTimeout(() => {
 
             fight.innerHTML = `<img src="gun.jpg" alt="gun" height="100%" width="100%">`
-            rounds.innerHTML = `<p>Round</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
-            userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
-            systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+            rounds.innerText = `${ (totalNo + 1) - no}/${totalNo}`
+            userScore.innerText = `${upt}`
+            systemScore.innerText = `${opt}`
         }, 300);
         message = `Gun kills the snake`
         result = `You Win !`
@@ -189,9 +191,9 @@ function start(value, callback) {
         setTimeout(() => {
 
             fight.innerHTML = `<img src="water.jpg" alt="water" height="100%" width="100%">`
-            rounds.innerHTML = `<p>Round</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
-            userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
-            systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+            rounds.innerText = `${ (totalNo + 1) - no}/${totalNo}`
+            userScore.innerText = `${upt}`
+            systemScore.innerText = `${opt}`
         }, 300);
         message = `gun lost in water`
         result = `You Win !`
@@ -202,9 +204,9 @@ function start(value, callback) {
         setTimeout(() => {
 
             fight.innerHTML = `<img src="snake.jpg" alt="snake" height="100%" width="100%">`
-            rounds.innerHTML = `<p>Round</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
-            userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
-            systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+            rounds.innerText = `${ (totalNo + 1) - no}/${totalNo}`
+            userScore.innerText = `${upt}`
+            systemScore.innerText = `${opt}`
         }, 300);
         message = `Snake drank the water`
         result = `You Lost !`
@@ -216,9 +218,9 @@ function start(value, callback) {
         setTimeout(() => {
 
             fight.innerHTML = `<img src="draw.jpg" alt="draw height="100%" width="100%">`
-            rounds.innerHTML = `<p>Round</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
-            userScore.innerHTML = `<div style="overflow : auto;">${uname}</div><p>${upt}</p>`
-            systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
+            rounds.innerText = `${ (totalNo + 1) - no}/${totalNo}`
+            userScore.innerText = `${upt}`
+            systemScore.innerText = `${opt}`
         }, 300);
         result = `Match draw`
         message = `Both gets one point`

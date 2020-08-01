@@ -42,7 +42,46 @@ function sign() {
 
 }
 
+function end(resmessage, desc) {
 
+    let link = "https://myimpnotes.herokuapp.com/snake.html"
+    let text = `Hey!, let's play Snake Water Gun game, have fun.     `
+    endhtml = `<div style="display: flex;flex-direction: column; align-items: center;justify-content: center; width: 100%;height: 100vh; padding: 10px;    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    margin: auto; border-radius: 18px;">
+
+        <div style="max-height:60vh; width:90%;margin: 3vh auto; background-image:url('cong1.jpg');display: flex;flex-direction: column; align-items: center ; border-radius: 12px;padding: 18px;">
+            <b style="font-size: 7vh;font-family: 'Lobster', cursive; color: rgb(235, 22, 22);">${resmessage}</b>
+            <b style="font-size: 10vh;padding:1vhfont-family: 'Baloo 2', cursive;color: rgb(240, 51, 199); ">${uname}</b>
+            <p style="font-size:3vh;padding:2vh; font-family: 'Acme', sans-serif;
+            ;">${desc}</p>
+            <input type="text" id="copyurl" style="display:none;" value="https://myimpnotes.herokuapp.com/snake.html">
+        </div>
+
+
+
+        <b id="replay" style="font-size:4vh; margin: 2vh auto; font-family: 'Roboto Slab', serif;background: linear-gradient(to top left, #00ff00 0%, #ffcc00 100%);padding: 12px 25px; border-radius: 12px; ">Replay</b>
+        <div class="share" style="; max-height:40vh; width:80%;padding: 2vh;margin: 4vh auto; display: flex; flex-direction: column;align-items: center; background: linear-gradient(to left, #6666ff 0%, #ff3300 100%);border-radius: 12px;">
+            <b style="font-size:6vh;
+  font-family: 'Roboto Slab', serif;padding: 8px 28px 18px 28px;font-size: 30px;  ">Share on</b>
+            <span>
+                <a onclick="copyFunc()"><img src="copy.png" alt=""style="height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
+                <a href="mailto:?subject=Play Game&body=${text} ${link}"><img src="email.png" alt=""style=" height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u= ${link}""><img src="facebook.png" alt="" style="height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
+                <a href="https://api.whatsapp.com/send?text= ${text} ${link}"><img src="whatsapp.jpg" alt=""style=" height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;"></a>
+        </span>
+        </div>
+
+    </div>`
+    let game = document.getElementById("game").innerHTML
+    document.getElementById('game').innerHTML = ""
+    document.getElementById('end').innerHTML = endhtml
+    document.getElementById('replay').addEventListener("click", () => {
+        window.location.reload()
+
+
+    })
+
+}
 
 
 function start(value, callback) {
@@ -51,6 +90,11 @@ function start(value, callback) {
     system = document.getElementById('system')
     user = document.getElementById('user')
     fight = document.getElementById('fight')
+    system.innerHTML = ""
+    user.innerHTML = ""
+    fight.innerHTML = ""
+    document.getElementById("msg").innerHTML = ""
+    document.getElementById("result").innerHTML = ""
     if (value == 1) {
         user.innerHTML = `<img src="snake.jpg" alt="gun">`
     } else if (value == 2) {
@@ -182,58 +226,12 @@ function start(value, callback) {
 
         result = document.getElementById('result').innerHTML = `<p>${result}</p>`
     }, 800);
-}
 
-function end(resmessage, desc) {
-
-    let link = "https://myimpnotes.herokuapp.com/snake.html"
-    let text = `Hey!, let's play Snake Water Gun game, have fun.     `
-    endhtml = `<div style="display: flex;flex-direction: column; align-items: center;justify-content: center; width: 100%;height: 100vh; padding: 10px;    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
-    margin: auto; border-radius: 18px;">
-
-        <div style="max-height:60vh; width:90%;margin: 3vh auto; background-image:url('cong1.jpg');display: flex;flex-direction: column; align-items: center ; border-radius: 12px;padding: 18px;">
-            <b style="font-size: 7vh;font-family: 'Lobster', cursive; color: rgb(235, 22, 22);">${resmessage}</b>
-            <b style="font-size: 10vh;padding:1vhfont-family: 'Baloo 2', cursive;color: rgb(240, 51, 199); ">${uname}</b>
-            <p style="font-size:3vh;padding:2vh; font-family: 'Acme', sans-serif;
-            ;">${desc}</p>
-            <input type="text" id="copyurl" style="display:none;" value="https://myimpnotes.herokuapp.com/snake.html">
-        </div>
-
-
-
-        <b id="replay" style="font-size:4vh; margin: 2vh auto; font-family: 'Roboto Slab', serif;background: linear-gradient(to top left, #00ff00 0%, #ffcc00 100%);padding: 12px 25px; border-radius: 12px; ">Replay</b>
-        <div class="share" style="; max-height:40vh; width:80%;padding: 2vh;margin: 4vh auto; display: flex; flex-direction: column;align-items: center; background: linear-gradient(to left, #6666ff 0%, #ff3300 100%);border-radius: 12px;">
-            <b style="font-size:6vh;
-  font-family: 'Roboto Slab', serif;padding: 8px 28px 18px 28px;font-size: 30px;  ">Share on</b>
-            <span>
-                <a onclick="copyFunc()"><img src="copy.png" alt=""style="height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
-                <a href="mailto:?subject=Play Game&body=${text} ${link}"><img src="email.png" alt=""style=" height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u= ${link}""><img src="facebook.png" alt="" style="height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
-                <a href="https://api.whatsapp.com/send?text= ${text} ${link}"><img src="whatsapp.jpg" alt=""style=" height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;"></a>
-        </span>
-        </div>
-
+    if (no > 9) {
+        document.getElementById('question').innerText = ""
+        document.getElementById("home").innerHTML = ` <div style="font-size: 12vh;">
+        <strong style="font-family: fantasy; color: red;">Game Over</strong>
     </div>`
-    let game = document.getElementById("game").innerHTML
-    document.getElementById('game').innerHTML = ""
-    document.getElementById('end').innerHTML = endhtml
-    document.getElementById('replay').addEventListener("click", () => {
-        window.location.reload()
-
-
-    })
-
-}
-
-
-
-console.log('number is ', no);
-// play()
-
-water = document.getElementById('2').addEventListener('click', () => {
-    if (no < 9) {
-        start(2)
-    } else {
         let resmessage = ""
         let desc = ""
         if (opt < upt) {
@@ -249,63 +247,33 @@ water = document.getElementById('2').addEventListener('click', () => {
             desc = `both gets ${opt} points`
 
         }
-        end(resmessage, desc, start(2))
+        setTimeout(() => {
+
+            end(resmessage, desc, start(1))
+        }, 3000);
     }
+}
+
+
+
+
+
+water = document.getElementById('2').addEventListener('click', () => {
+
+    start(2)
+
+
 
 })
 gun = document.getElementById('3').addEventListener('click', () => {
     console.log('you clicked gun');
-    if (no < 9) {
-        start(3)
-    } else {
-        let resmessage = ""
-        let desc = ""
-        if (opt < upt) {
-            resmessage = "Congratulations"
-            desc = `You won with ${upt-opt} points`
 
-        } else if (upt < opt) {
-            resmessage = "Better luck next time"
-            desc = `You lose with ${opt-upt} points`
+    start(3)
 
-        } else {
-            resmessage = "Match draw"
-            desc = `both gets ${opt} points`
-
-        }
-        end(resmessage, desc, start(3))
-
-    }
 })
 snake = document.getElementById('1').addEventListener('click', () => {
     console.log('you clicked snake');
-    if (no < 9) {
-        start(1)
-    } else {
-        let resmessage = ""
-        let desc = ""
-        if (opt < upt) {
-            resmessage = "Congratulations"
-            desc = `You won with ${upt-opt} points`
 
-        } else if (upt < opt) {
-            resmessage = "Better luck next time"
-            desc = `You lose with ${opt-upt} points`
+    start(1)
 
-        } else {
-            resmessage = "Match draw"
-            desc = `both gets ${opt} points`
-
-        }
-        document.getElementById("game").style.disabled = true;
-        // setInterval(() => {
-        //     start(1)
-        // }, 3000);
-        // setTimeout(() => {
-        end(resmessage, desc, start(1))
-
-        // }, 3000);
-        // clearInterval()
-
-    }
 })

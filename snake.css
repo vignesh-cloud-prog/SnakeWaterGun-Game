@@ -38,7 +38,7 @@
 
 .board {
     width: 80%;
-    overflow: hidden;
+    overflow: auto;
     height: 8vh;
     align-items: center;
     justify-content: center;
@@ -175,7 +175,7 @@
     height: max-content;
     color: red;
     padding: 4px;
-    overflow: hidden;
+    overflow: auto;
     /* margin: 0; */
     text-align: center;
 }

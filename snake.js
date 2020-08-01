@@ -49,9 +49,9 @@ function end(resmessage, desc) {
     endhtml = `<div style="display: flex;flex-direction: column; align-items: center;justify-content: center; width: 100%;height: 100vh; padding: 10px;    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
     margin: auto; border-radius: 18px;">
 
-        <div style="max-height:60vh; width:90%;margin: 3vh auto; background-image:url('cong1.jpg');display: flex;flex-direction: column; align-items: center ; border-radius: 12px;padding: 18px;">
+        <div style="max-height:60vh; width:90%;margin: 3vh auto; background-image:url('cong1.jpg'); background-repeat:no-repear;background-size:cover;display: flex;flex-direction: column; align-items: center ; border-radius: 12px;padding: 18px;">
             <b style="font-size: 7vh;font-family: 'Lobster', cursive; color: rgb(235, 22, 22);">${resmessage}</b>
-            <b style="font-size: 10vh;padding:1vhfont-family: 'Baloo 2', cursive;color: rgb(240, 51, 199); ">${uname}</b>
+            <b style="font-size: 9vh;padding:1vhfont-family: 'Baloo 2', cursive;color: rgb(240, 51, 199); ">${uname}</b>
             <p style="font-size:3vh;padding:2vh; font-family: 'Acme', sans-serif;
             ;">${desc}</p>
             <input type="text" id="copyurl" style="display:none;" value="https://myimpnotes.herokuapp.com/snake.html">
@@ -132,9 +132,9 @@ function start(value, callback) {
 
             fight.innerHTML = `<img src="snake.jpg" alt="snake" height="100%" width="100%">`
             rounds.innerHTML = `<p>Round</p><p>${no+1}/10</p>`
-            userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
+            userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
-        }, 500);
+        }, 300);
         message = `Snake drank the water`
         result = `You Win !`
     } else if (userno == "1" && sysno == "3") {
@@ -145,9 +145,9 @@ function start(value, callback) {
 
             fight.innerHTML = `<img src="gun.jpg" alt="gun" height="100%" width="100%">`
             rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-            userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
+            userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
-        }, 500);
+        }, 300);
         message = `Gun shooted the  snake`
         result = `You Lost !`
     } else if (userno == "3" && sysno == "2") {
@@ -158,9 +158,9 @@ function start(value, callback) {
 
             fight.innerHTML = `<img src="water.jpg" alt="water" height="100%" width="100%">`
             rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-            userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
+            userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
-        }, 500);
+        }, 300);
         message = `gun lost in water`
         result = `You Lost !`
     } else if (userno == "3" && sysno == "1") {
@@ -171,9 +171,9 @@ function start(value, callback) {
 
             fight.innerHTML = `<img src="gun.jpg" alt="gun" height="100%" width="100%">`
             rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-            userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
+            userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
-        }, 500);
+        }, 300);
         message = `Gun kills the snake`
         result = `You Win !`
     } else if (userno == "2" && sysno == "3") {
@@ -184,9 +184,9 @@ function start(value, callback) {
 
             fight.innerHTML = `<img src="water.jpg" alt="water" height="100%" width="100%">`
             rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-            userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
+            userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
-        }, 500);
+        }, 300);
         message = `gun lost in water`
         result = `You Win !`
     } else if (userno == "2" && sysno == "1") {
@@ -197,9 +197,9 @@ function start(value, callback) {
 
             fight.innerHTML = `<img src="snake.jpg" alt="snake" height="100%" width="100%">`
             rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-            userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
+            userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
-        }, 500);
+        }, 300);
         message = `Snake drank the water`
         result = `You Lost !`
     } else if (userno == sysno) {
@@ -211,9 +211,9 @@ function start(value, callback) {
 
             fight.innerHTML = `<img src="draw.jpg" alt="draw height="100%" width="100%">`
             rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
-            userScore.innerHTML = `<p>${uname}</p><p>${upt}</p>`
+            userScore.innerHTML = `<div style="overflow : auto;">${uname}</div><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
-        }, 500);
+        }, 300);
         result = `Match draw`
         message = `Both gets one point`
 

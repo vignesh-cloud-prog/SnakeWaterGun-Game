@@ -36,13 +36,13 @@ function sign() {
         uname = document.getElementById("name").value
         no = parseInt(document.getElementById("noOfRounds").value)
         totalNo = no
-        if (regex.test(uname) && regex.test(no)) {
+        if (regex.test(uname)) {
             entry = document.getElementById("entry").innerHTML = ""
             document.getElementById('userName').innerText = uname
             document.getElementById("rounds").innerText = `${ (totalNo + 1) - no}/${totalNo}`
 
         } else {
-            alert("Please enter your name, name shold only be alphabets and between 2-10 characters")
+            alert("Please enter your name, name shold only be alphabets and between 2-15 characters")
         }
         console.log(typeof no);
     })

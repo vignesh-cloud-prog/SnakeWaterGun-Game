@@ -23,7 +23,7 @@ function sign() {
     -webkit-background-clip: text;
     background-clip: text;
   ">Snake Water Gun</p>
-    <input id="name" type="text" placeholder="Enter your name " style="font-weight:bold;text-align:center; border-radius: 30px; width: 60%;height:80px; margin: 5vh; padding:10px; border: 4px solid rgba(255, 128, 43, 0.849); font-family:cursive;font-size:55px;">
+    <input id="name" type="text" placeholder="Enter your name " style="font-weight:bold;text-align:center; border-radius: 30px; width: 60%;height:80px; margin: 5vh; padding:10px; border: 4px solid rgba(255, 128, 43, 0.849); font-family:monospace;font-size:55px;">
     <button id="play" style=" border-radius: 23px; width: 50%; margin:10px 20px 60px 20px; background: linear-gradient(to bottom, #0066ff 0%, #ff99cc 100%); padding:20px 20px; border: 5px solid rgb(72, 72, 231); font-size: 90px; font-family: 'Fredoka One', cursive;">Play</button>
 </div> </div>`
 

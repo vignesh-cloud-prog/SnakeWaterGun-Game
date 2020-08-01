@@ -52,7 +52,7 @@ function sign() {
 
 function end(resmessage, desc) {
 
-    let link = "https://myimpnotes.herokuapp.com/snake.html"
+    let link = "https://vigneshnu.herokuapp.com/swg.html"
     let text = `Hey!, let's play Snake Water Gun game, have fun, let's know how lucky you are!     `
     endhtml = `<div style="display: flex;flex-direction: column; align-items: center;justify-content: center; width: 100%;height: 100vh; padding: 10px;    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
     margin: auto; border-radius: 18px;">
@@ -62,7 +62,7 @@ function end(resmessage, desc) {
             <b style="text-align:center; font-size: 9vh;padding:1vhfont-family: 'Baloo 2', cursive;color: rgb(240, 51, 199); ">${uname}</b>
             <p style="font-size:3vh;padding:2vh; font-family: 'Acme', sans-serif;
             ;">${desc}</p>
-            <input type="text" id="copyurl" style="display:none;" value="https://myimpnotes.herokuapp.com/snake.html">
+            <input type="text" id="copyurl" style="display:none;" value="https://vigneshnu.herokuapp.com/swg.html">
         </div>
 
 

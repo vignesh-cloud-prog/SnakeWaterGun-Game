@@ -229,7 +229,7 @@ function start(value, callback) {
 
     if (no > 9) {
         document.getElementById('question').innerText = ""
-        document.getElementById("home").innerHTML = ` <div style="font-size: 12vh;">
+        document.getElementById("home").innerHTML = ` <div style="font-size: 8vh;">
         <strong style="font-family: fantasy; color: red;">Game Over</strong>
     </div>`
         let resmessage = ""

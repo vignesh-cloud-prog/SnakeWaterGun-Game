@@ -216,7 +216,7 @@ img {
 #info h1 {
     font-size: 6em;
     margin: 1vh;
-    font-family: monospace;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #info p {
@@ -242,8 +242,8 @@ img {
 }
 
 #devinfo img {
-    height: 40px;
-    width: 40px;
+    height: 4vh;
+    width: 4vh;
     border-radius: 8px;
     padding: 2px;
 }

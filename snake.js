@@ -3,6 +3,7 @@ let uname = "User"
 let upt = 0
 let opt = 0
 var no = 0
+let totalNo = 0
 
 
 function copyFunc() {
@@ -23,7 +24,8 @@ function sign() {
     -webkit-background-clip: text;
     background-clip: text;
   ">Snake Water Gun</p>
-    <input id="name" type="text" placeholder="Enter your name " style="font-weight:bold;text-align:center; border-radius: 30px; width: 60%;height:80px; margin: 5vh; padding:10px; border: 4px solid rgba(255, 128, 43, 0.849); font-family:monospace;font-size:55px;">
+    <input id="name" type="text" placeholder="Enter your name " style="font-weight:bold;text-align:center; border-radius: 30px; width: 60%;height:80px; margin: 5vh; padding:10px; border: 4px solid rgba(255, 128, 43, 0.849); font-family:'Lobster', cursive;font-size:55px;">
+    <input id="noOfRounds" type="number" min="5" max="50" step="5" value="10" placeholder="how many rounds do you want to play? " style="font-weight:bold;text-align:center; border-radius: 30px; width: 60%;height:80px; margin: 5vh; padding:10px; border: 4px solid rgba(255, 128, 43, 0.849); font-family:monospace;font-size:55px;">
     <button id="play" style=" border-radius: 23px; width: 50%; margin:10px 20px 60px 20px; background: linear-gradient(to bottom, #0066ff 0%, #ff99cc 100%); padding:20px 20px; border: 5px solid rgb(72, 72, 231); font-size: 90px; font-family: 'Fredoka One', cursive;">Play</button>
 </div> </div>`
 
@@ -31,13 +33,17 @@ function sign() {
 
     play = document.getElementById("play").addEventListener("click", () => {
         uname = document.getElementById("name").value
+        no = parseInt(document.getElementById("noOfRounds").value)
+        totalNo = no
         if (regex.test(uname)) {
             entry = document.getElementById("entry").innerHTML = ""
             userScore.innerHTML = `<p>${uname}</p><p>00</p>`
+            document.getElementById("rounds").innerHTML = `<p>Rounds</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
 
         } else {
             alert("Please enter your name, name shold only be alphabets and between 2-10 characters")
         }
+        console.log(typeof no);
     })
 
 }
@@ -45,13 +51,13 @@ function sign() {
 function end(resmessage, desc) {
 
     let link = "https://myimpnotes.herokuapp.com/snake.html"
-    let text = `Hey!, let's play Snake Water Gun game, have fun.     `
+    let text = `Hey!, let's play Snake Water Gun game, have fun, let's know how lucky you are!     `
     endhtml = `<div style="display: flex;flex-direction: column; align-items: center;justify-content: center; width: 100%;height: 100vh; padding: 10px;    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
     margin: auto; border-radius: 18px;">
 
         <div style="max-height:60vh; width:90%;margin: 3vh auto; background-image:url('cong1.jpg'); background-repeat:no-repear;background-size:cover;display: flex;flex-direction: column; align-items: center ; border-radius: 12px;padding: 18px;">
-            <b style="font-size: 7vh;font-family: 'Lobster', cursive; color: rgb(235, 22, 22);">${resmessage}</b>
-            <b style="font-size: 9vh;padding:1vhfont-family: 'Baloo 2', cursive;color: rgb(240, 51, 199); ">${uname}</b>
+            <b style="text-align:center; font-size: 7vh;font-family: 'Lobster', cursive; color: rgb(235, 22, 22);">${resmessage}</b>
+            <b style="text-align:center; font-size: 9vh;padding:1vhfont-family: 'Baloo 2', cursive;color: rgb(240, 51, 199); ">${uname}</b>
             <p style="font-size:3vh;padding:2vh; font-family: 'Acme', sans-serif;
             ;">${desc}</p>
             <input type="text" id="copyurl" style="display:none;" value="https://myimpnotes.herokuapp.com/snake.html">
@@ -85,7 +91,7 @@ function end(resmessage, desc) {
 
 
 function start(value, callback) {
-    no = no + 1
+    no = no - 1
     sysno = Math.ceil(0 + (6 - 3) * Math.random());
     system = document.getElementById('system')
     user = document.getElementById('user')
@@ -131,7 +137,7 @@ function start(value, callback) {
         setTimeout(() => {
 
             fight.innerHTML = `<img src="snake.jpg" alt="snake" height="100%" width="100%">`
-            rounds.innerHTML = `<p>Round</p><p>${no+1}/10</p>`
+            rounds.innerHTML = `<p>Round</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
             userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
         }, 300);
@@ -144,7 +150,7 @@ function start(value, callback) {
         setTimeout(() => {
 
             fight.innerHTML = `<img src="gun.jpg" alt="gun" height="100%" width="100%">`
-            rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
+            rounds.innerHTML = `<p>Round</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
             userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
         }, 300);
@@ -157,7 +163,7 @@ function start(value, callback) {
         setTimeout(() => {
 
             fight.innerHTML = `<img src="water.jpg" alt="water" height="100%" width="100%">`
-            rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
+            rounds.innerHTML = `<p>Round</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
             userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
         }, 300);
@@ -170,7 +176,7 @@ function start(value, callback) {
         setTimeout(() => {
 
             fight.innerHTML = `<img src="gun.jpg" alt="gun" height="100%" width="100%">`
-            rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
+            rounds.innerHTML = `<p>Round</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
             userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
         }, 300);
@@ -183,7 +189,7 @@ function start(value, callback) {
         setTimeout(() => {
 
             fight.innerHTML = `<img src="water.jpg" alt="water" height="100%" width="100%">`
-            rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
+            rounds.innerHTML = `<p>Round</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
             userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
         }, 300);
@@ -196,7 +202,7 @@ function start(value, callback) {
         setTimeout(() => {
 
             fight.innerHTML = `<img src="snake.jpg" alt="snake" height="100%" width="100%">`
-            rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
+            rounds.innerHTML = `<p>Round</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
             userScore.innerHTML = `<div style="overflow:auto;">${uname}</div><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
         }, 300);
@@ -210,7 +216,7 @@ function start(value, callback) {
         setTimeout(() => {
 
             fight.innerHTML = `<img src="draw.jpg" alt="draw height="100%" width="100%">`
-            rounds.innerHTML = `<p>Round</p><p>${no}/10</p>`
+            rounds.innerHTML = `<p>Round</p><p>${ (totalNo + 1) - no}/${totalNo}</p>`
             userScore.innerHTML = `<div style="overflow : auto;">${uname}</div><p>${upt}</p>`
             systemScore.innerHTML = `<p>System</p><p>${opt}</p>`
         }, 300);
@@ -227,9 +233,9 @@ function start(value, callback) {
         result = document.getElementById('result').innerHTML = `<p>${result}</p>`
     }, 800);
 
-    if (no > 9) {
+    if (no == 1) {
         document.getElementById('question').innerText = ""
-        document.getElementById("home").innerHTML = ` <div style="font-size: 8vh;">
+        document.getElementById("home").innerHTML = ` <div class="flex" style="height:18vh;font-size: 8vh;">
         <strong style="font-family: fantasy; color: red;">Game Over</strong>
     </div>`
         let resmessage = ""

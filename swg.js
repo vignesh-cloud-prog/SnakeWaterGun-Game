@@ -187,7 +187,7 @@ function start(value, callback) {
         upt += 1;
         opt += 1;
         setTimeout(() => {
-            fight.innerHTML = `<img src="draw.jpg" alt="draw >`
+            fight.innerHTML = `<img src="draw.jpg" alt="draw" >`
             rounds.innerText = `${ (totalNo + 1) - no}/${totalNo}`
             userScore.innerText = `${upt}`
             systemScore.innerText = `${opt}`

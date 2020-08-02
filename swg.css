@@ -55,7 +55,6 @@
 }
 
 #msg {
-    /* height: 20vh; */
     justify-content: center;
 }
 
@@ -97,7 +96,7 @@
 
 #army {
     height: 15vh;
-    margin: 10px 25px;
+    margin: 10px auto;
     width: 90%;
     display: flex;
     align-items: center;
@@ -139,15 +138,6 @@
     margin: auto;
     font-size: 1rem;
 }
-
-
-/* #userCoin {
-    border-radius: 28px;
-    background-color: white;
-    width: 16vh;
-    height: 10vh;
-    margin: auto;
-} */
 
 #home {
     display: flex;

@@ -4,17 +4,17 @@ let opt = 0
 var no = 10
 let totalNo = 0
 
-// function copyFunc() {
-//     var copyText = document.getElementById("copyurl");
-//     copyText.focus()
-//     copyText.select()
-//     copyText.setSelectionRange(0, 99999)
-//     document.execCommand("copy");
-//     alert("Copied the url: " + copyText.value);
-// }
 function copyFunc() {
-    window.prompt("Copy to clipboard: Ctrl+C,  Enter", 'https: //vigneshnu.herokuapp.com/swg.html');
+    var copyText = document.getElementById("copyurl");
+    copyText.focus()
+    copyText.select()
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    alert("Copied the url: " + copyText.value);
 }
+// function copyFunc() {
+//     window.prompt("Copy to clipboard:", 'https: //vigneshnu.herokuapp.com/swg.html');
+// }
 
 function sign() {
     let regex = /[a-zA-Z]{3,15}/;

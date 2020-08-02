@@ -4,13 +4,16 @@ let opt = 0
 var no = 10
 let totalNo = 0
 
+// function copyFunc() {
+//     var copyText = document.getElementById("copyurl");
+//     copyText.focus()
+//     copyText.select()
+//     copyText.setSelectionRange(0, 99999)
+//     document.execCommand("copy");
+//     alert("Copied the url: " + copyText.value);
+// }
 function copyFunc() {
-    var copyText = document.getElementById("copyurl");
-    copyText.focus()
-    copyText.select()
-    copyText.setSelectionRange(0, 99999)
-    document.execCommand("copy");
-    alert("Copied the url: " + copyText.value);
+    window.prompt("Copy to clipboard: Ctrl+C,  Enter", 'https: //vigneshnu.herokuapp.com/swg.html');
 }
 
 function sign() {
@@ -58,7 +61,7 @@ function end(resmessage, desc) {
                     <b style="text-align:center; font-size: 9vh;padding:1vhfont-family: 'Baloo 2', cursive;color: rgb(240, 51, 199); ">${uname}</b>
                     <p style="font-size:3vh;padding:2vh; font-family: 'Acme', sans-serif;
                     ;">${desc}</p>
-                    <input type="text" id="copyurl" style="display:none;" value="https://vigneshnu.herokuapp.com/swg.html" />
+                    <input type="text" id="copyurl" style="display:none;" value="https://vigneshnu.herokuapp.com/swg.html"/>
                 </div>
 
 

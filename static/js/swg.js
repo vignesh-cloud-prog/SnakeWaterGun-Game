@@ -70,10 +70,10 @@ function end(resmessage, desc) {
                 <div class="share" style="; max-height:40vh; width:80%;padding: 2vh;margin: 4vh auto; display: flex; flex-direction: column;align-items: center; background: linear-gradient(to left, #6666ff 0%, #ff3300 100%);border-radius: 12px;">
                     <b style="font-size:6vh;font-family: 'Roboto Slab', serif;padding: 8px 28px 18px 28px;font-size: 30px;  ">Share on</b>
                     <span>
-                        <a onclick="copyFunc()"><img src="copy.png" alt=""style="height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
-                        <a href="mailto:?subject=Play Game&body=${text} ${link}"><img src="email.png" alt=""style=" height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u= ${link}""><img src="facebook.png" alt="" style="height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
-                        <a href="https://api.whatsapp.com/send?text= ${text} ${link}"><img src="whatsapp.jpg" alt=""style=" height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;"></a>
+                        <a onclick="copyFunc()"><img src="static/images/copy.png" alt=""style="height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
+                        <a href="mailto:?subject=Play Game&body=${text} ${link}"><img src="static/images/email.png" alt=""style=" height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u= ${link}""><img src="static/images/facebook.png" alt="" style="height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;""></a>
+                        <a href="https://api.whatsapp.com/send?text= ${text} ${link}"><img src="static/images/whatsapp.jpg" alt=""style=" height: 8vh;padding:5px; width: 8vh;padding:5px; border-radius: 12px;"></a>
                 </span>
                 </div>
                 </div>`
@@ -98,22 +98,22 @@ function start(value, callback) {
     document.getElementById("msg").innerHTML = ""
     document.getElementById("result").innerHTML = ""
     if (value == 1) {
-        user.innerHTML = `<img src="snake.jpg" alt="snake">`
+        user.innerHTML = `<img src="static/images/snake.jpg" alt="snake">`
     } else if (value == 2) {
-        user.innerHTML = `<img src="water.jpg" alt="water">`
+        user.innerHTML = `<img src="static/images/water.jpg" alt="water">`
 
     } else if (value == 3) {
-        user.innerHTML = `<img src="gun.jpg" alt="gun">`
+        user.innerHTML = `<img src="static/images/gun.jpg" alt="gun">`
 
     }
 
     if (sysno == 1) {
-        system.innerHTML = `<img src="snake.jpg" alt="snake" >`
+        system.innerHTML = `<img src="static/images/snake.jpg" alt="snake" >`
     } else if (sysno == 2) {
-        system.innerHTML = `<img src="water.jpg" alt="water">`
+        system.innerHTML = `<img src="static/images/water.jpg" alt="water">`
 
     } else if (sysno == 3) {
-        system.innerHTML = `<img src="gun.jpg" alt="gun">`
+        system.innerHTML = `<img src="static/images/gun.jpg" alt="gun">`
 
     }
     userno = value
@@ -126,7 +126,7 @@ function start(value, callback) {
         console.log('You Win !')
         upt += 1
         setTimeout(() => {
-            fight.innerHTML = `<img src="snake.jpg" alt="snake">`
+            fight.innerHTML = `<img src="static/images/snake.jpg" alt="snake">`
             rounds.innerText = `${ (totalNo + 1) - no}/${totalNo}`
             userScore.innerText = `${upt}`
             systemScore.innerText = `${opt}`
@@ -136,7 +136,7 @@ function start(value, callback) {
     } else if (userno == "1" && sysno == "3") {
         opt += 1
         setTimeout(() => {
-            fight.innerHTML = `<img src="gun.jpg" alt="gun" >`
+            fight.innerHTML = `<img src="static/images/gun.jpg" alt="gun" >`
             rounds.innerText = `${ (totalNo + 1) - no}/${totalNo}`
             userScore.innerText = `${upt}`
             systemScore.innerText = `${opt}`
@@ -146,7 +146,7 @@ function start(value, callback) {
     } else if (userno == "3" && sysno == "2") {
         opt += 1
         setTimeout(() => {
-            fight.innerHTML = `<img src="water.jpg" alt="water" >`
+            fight.innerHTML = `<img src="static/images/water.jpg" alt="water" >`
             rounds.innerText = `${ (totalNo + 1) - no}/${totalNo}`
             userScore.innerText = `${upt}`
             systemScore.innerText = `${opt}`
@@ -156,7 +156,7 @@ function start(value, callback) {
     } else if (userno == "3" && sysno == "1") {
         upt += 1
         setTimeout(() => {
-            fight.innerHTML = `<img src="gun.jpg" alt="gun" >`
+            fight.innerHTML = `<img src="static/images/gun.jpg" alt="gun" >`
             rounds.innerText = `${ (totalNo + 1) - no}/${totalNo}`
             userScore.innerText = `${upt}`
             systemScore.innerText = `${opt}`
@@ -166,7 +166,7 @@ function start(value, callback) {
     } else if (userno == "2" && sysno == "3") {
         upt += 1
         setTimeout(() => {
-            fight.innerHTML = `<img src="water.jpg" alt="water" >`
+            fight.innerHTML = `<img src="static/images/water.jpg" alt="water" >`
             rounds.innerText = `${ (totalNo + 1) - no}/${totalNo}`
             userScore.innerText = `${upt}`
             systemScore.innerText = `${opt}`
@@ -176,7 +176,7 @@ function start(value, callback) {
     } else if (userno == "2" && sysno == "1") {
         opt += 1
         setTimeout(() => {
-            fight.innerHTML = `<img src="snake.jpg" alt="snake" >`
+            fight.innerHTML = `<img src="static/images/snake.jpg" alt="snake" >`
             rounds.innerText = `${ (totalNo + 1) - no}/${totalNo}`
             userScore.innerText = `${upt}`
             systemScore.innerText = `${opt}`
@@ -187,7 +187,7 @@ function start(value, callback) {
         upt += 1;
         opt += 1;
         setTimeout(() => {
-            fight.innerHTML = `<img src="draw.jpg" alt="draw" >`
+            fight.innerHTML = `<img src="static/images/draw.jpg" alt="draw" >`
             rounds.innerText = `${ (totalNo + 1) - no}/${totalNo}`
             userScore.innerText = `${upt}`
             systemScore.innerText = `${opt}`

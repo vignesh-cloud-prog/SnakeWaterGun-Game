@@ -4,12 +4,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vignesh</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+
+    <title>vignesh's portfolio</title>
 </head>
 
 <body>
-    <a href="swg.html">Go to  Snake Water Gun  game</a>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Vignesh</a>
+            </div>
 
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Vignesh</span><br> Full Stack Developer</h1>
+
+                <a href="#contact" class="button">Contact</a>
+            </div>
+
+            <div class="home__social">
+                <a href="https://www.linkedin.com/in/vignesh-n-u-37aa761b2/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/vignesh-cloud-prog" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+            </div>
+
+            <div class="home__img">
+                <img src="assets/img/nobg.png" alt="">
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section " id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/bluebg.jpg" alt="">
+                </div>
+
+                <div>
+                    <h2 class="about__subtitle">I'am Vignesh</h2>
+                    <p class="about__text">My goal is develop applications for better life. When I developing user experience and security is the main concern.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills__container bd-grid">
+                <div>
+                    <h2 class="skills__subtitle">Profesional Skills</h2>
+                    <p class="skills__text">My skills that may be useful to you</p>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-html5 skills__icon'></i>
+                            <span class="skills__name">HTML5</span>
+                        </div>
+                        <div class="skills__bar skills__html">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">95%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-css3 skills__icon'></i>
+                            <span class="skills__name">CSS3</span>
+                        </div>
+                        <div class="skills__bar skills__css">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">85%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-javascript skills__icon'></i>
+                            <span class="skills__name">JAVASCRIPT</span>
+                        </div>
+                        <div class="skills__bar skills__js">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">65%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-django skills__icon '></i>
+                            <span class="skills__name">DJANGO</span>
+                        </div>
+                        <div class="skills__bar skills__ux">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">75%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                </div>
+            </div>
+        </section>
+
+        <!--===== WORK =====-->
+        <section class="work section" id="work">
+            <h2 class="section-title">Work</h2>
+
+            <div class="work__container bd-grid">
+                <div class="work__img">
+                    <h6>QP Web</h6>
+                    <img src="assets/img/work1.jpg" alt="">
+
+                    <p>An website to share Question papers from universities.Built using python django framework and postgressql. You can find the question paper required to you according to your university, course and subject. There is also seaching and
+                        filtering options. Provide more and more question papers to help some like us.
+                        <a href="https://questionpaper.herokuapp.com/">Vist this site</a>
+                    </p>
+
+                </div>
+                <div class="work__img">
+                    <h6>Notes app</h6>
+                    <img src="assets/img/work2.jpg" alt="">
+                    <p>In this webapp you can take notes and schedule your task. Get alert by alarm. developed using
+                        <a href="https://myimpnotes.herokuapp.com/">Visit this site</a>
+                    </p>
+                </div>
+
+
+                <div class="work__img">
+                    <h6>Snake Water Gun Game</h6>
+                    <img src="assets/img/work5.jpg" alt="">
+                    <p>A simple game which we all played in our childhood. Developed using HTML CSS and javascript.
+                        <a href="./swg.html">Play the game</a>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer" id="contact">
+        <p class="footer__title">Vignesh</p>
+        <div class="footer__social">
+            <a href="https://www.facebook.com/vignesh.viggi.775" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+            <a href="https://www.instagram.com/vignesh_n_u/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+            <a href="https://twitter.com/VigneshNU2?s=08" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+        </div>
+        <p>&#169; 2020 copyright all right reserved</p>
+    </footer>
+
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

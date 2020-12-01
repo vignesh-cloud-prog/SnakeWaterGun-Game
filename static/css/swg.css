@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .flex {
@@ -236,4 +237,11 @@ img {
 #devinfo span {
     padding: 1vh;
     margin-bottom: 1vh;
+}
+
+@media(min-width:1024px) {
+    #abs {
+        left: 50%;
+        margin-left: -50vh;
+    }
 }

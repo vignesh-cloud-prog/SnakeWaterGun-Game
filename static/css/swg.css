@@ -128,6 +128,7 @@
 }
 
 #system,#user {
+<<<<<<< HEAD
     
     height: 10vh;
     width: 15vh;
@@ -137,6 +138,14 @@
 
 
    
+=======
+    height: 8vh;
+    width: 15vh;
+    margin: auto;
+    border-radius: 18px;
+    border: 4px solid gold;
+}
+>>>>>>> b2903102e180abdb73172f9d9ba5f0c3611386a6
 
 #state {
     margin: auto;
@@ -166,18 +175,12 @@
 
 
 /* user planel */
-
-.coin img {
+#user img,#system img {
     height: 7vh;
-    width: 13.5vh;
+    width: 14vh;
     margin: auto;
-    object-fit: cover;
-}
-
-img {
-    height: 8vh;
-    width: 10vh;
-    margin: auto;
+    border-radius: 18px;
+    
 }
 
 .weapon {
@@ -193,6 +196,10 @@ img {
 }
 .weapon p{
     margin-top: 1rem;
+}
+.weapon img{
+    height: 7vh;
+    width: 14;
 }
 
 #info {

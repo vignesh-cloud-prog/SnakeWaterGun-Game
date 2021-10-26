@@ -108,10 +108,11 @@ body.dark-theme{
 
 html{
     scroll-behavior: smooth;
+    
 }
 
 body{
-    margin: 0 0 var(--header-height) 0;
+    margin:var(--header-height) 0 0  0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
@@ -141,6 +142,7 @@ img{
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section{
     padding: 2rem 0 4rem;
+    padding-top: 4rem;
 }
 
 .section__title{
@@ -325,9 +327,6 @@ img{
     margin-bottom: var(--mb-2);
 }
 
-.home__scroll{
-    /*display: none;*/
-}
 
 .home__scroll-button{
     color: var(--first-color);
@@ -1096,6 +1095,7 @@ img{
     .main,
     .footer__container{
         padding: 0 1rem;
+        
     }
 
     .nav{

@@ -9,4 +9,4 @@ This is a game. Where you have to choose any one option from, snake🐍 or water
 - Gun vs Snake => Gun wins ( Since snake will die from fire )
 - If both are equal then match draw. both will get 5 points.
 
-**[🕹 Click here to Play-Now](vigneshnu.herokuapp.com/swg.html)**
+**[🕹 Click here to Play-Now](https://github.com/vignesh-cloud-prog/SnakeWaterGun-Game)**
